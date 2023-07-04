@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:insert="~{layouts/head :: head}">
+</head>
+
+<body>
+	<header th:insert="~{layouts/header :: header}">
+	</header>
+	<div class="container">
+		<div class="row row-cols-1 row-cols-md-3 g-4">
+			<div class="col" th:each="pelicula : ${peliculas}">
+				<div class= "card">
+					<img src="..." class="card-img-top" alt="...">
+					<div class= "card-body">
+						<h5 class="card-tittle" th:text="${pelicula.nombre}"></h5>
+						<p class="card-text" th:text="${pelicula.genero.nombre}">
+						</p>
+						<div class="catalogo-actor-container" th:each="$[">
+							<div class="catalogo-actor-imagen">
+							</div>
+							<div class="catalogo-actor-texto">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
